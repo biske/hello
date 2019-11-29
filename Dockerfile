@@ -14,6 +14,9 @@ RUN mix local.hex --force && \
 # set build ENV
 ENV MIX_ENV=prod
 
+ARG SECRET_KEY_BASE
+ARG DATABASE_URL
+
 # install mix dependencies
 COPY mix.exs mix.lock ./
 COPY config config
